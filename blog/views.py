@@ -1,8 +1,9 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-# Create your views here.
+from .models import Post
 
-
-def home(request):
-    # return render(request, 'myapp/home.html')
-    return HttpResponse('<h1> Hello Blog Page <h1>')
+def post_list(request):
+    qs = Post.objects.filter(status='p')
+    context = {
+        'object_list' : qs
+    }
+    return render (request, "blog/post_list.html", context )
