@@ -18,8 +18,8 @@
                     {% comment %} <a class="nav-item nav-link" href="{% url 'profile' %}">Profile</a> {% endcomment %}
                     <a class="nav-item nav-link" href="{% url 'blog:create' %}">New Post</a>
                     {% else %}
-                    <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
-                    <a class="nav-item nav-link" href="{% url 'register' %}">Register</a>
+                    {% comment %} <a class="nav-item nav-link" href="{% url 'login' %}">Login</a> {% endcomment %}
+                    {% comment %} <a class="nav-item nav-link" href="{% url 'register' %}">Register</a> {% endcomment %}
                     {% endif %}
                 </div>
             </div>
